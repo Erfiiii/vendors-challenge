@@ -1,0 +1,1 @@
+export {getVendors} from './vendors';
