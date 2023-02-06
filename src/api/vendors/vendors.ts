@@ -11,7 +11,8 @@ export const getVendors = async (page: number): Promise<Vendor[]> => {
             backgroundImage: item.data.backgroundImage,
             rate: item.data.rate,
             isExpress: item.data.isZFExpress,
-            deliveryPrice: item.data.deliveryFee
+            deliveryPrice: item.data.deliveryFee,
+            voteCount: item.data.voteCount
         }))
     } catch (error) {
         throw error

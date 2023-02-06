@@ -1,0 +1,14 @@
+.wrapper {
+    background-color: rgba(91, 168, 41, 0.08);
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.rate {
+    font-size: x-small;
+    margin-left: 5px;
+}

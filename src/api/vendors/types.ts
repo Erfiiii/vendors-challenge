@@ -6,5 +6,6 @@ export type Vendor = {
     backgroundImage: string;
     rate: number;
     isExpress: boolean;
-    deliveryPrice: string;
+    deliveryPrice: number;
+    voteCount: number;
 }
