@@ -25,6 +25,9 @@ module.exports = {
             loader: 'style-loader',
           },
           {
+            loader: "css-modules-typescript-loader"
+          },
+          {
             loader: 'css-loader',
           },
           {
@@ -45,7 +48,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: [".ts", ".tsx", ".js", ".css", ".scss"]
   },
   plugins: [
     new HtmlWebpackPlugin({

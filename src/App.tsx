@@ -1,7 +1,8 @@
 import React from 'react';
+import { AppRouter } from './AppRouter';
 import './index.scss';
 
 function App() {
-  return <div>Initial app</div>;
+  return <AppRouter/>;
 }
 export default App;
