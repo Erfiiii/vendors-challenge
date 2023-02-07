@@ -37,17 +37,21 @@ module.exports = {
         ],
       },
       {
+        test: /\.svg$/,
+        loader: 'url-loader'
+      },
+      {
         test: /\.(woff|woff2|eot|ttf)$/,
         type: 'asset/resource',
         generator: {
           filename: 'static/[hash][ext][query]',
         },
       },
-      {
-        test: /\.svg$/i,
-        issuer: /\.[jt]sx?$/,
-        use: ['@svgr/webpack', 'url-loader'],
-      },
+    //   {
+    //     test: /\.svg$/i,
+    //     issuer: /\.[jt]sx?$/,
+    //     use: ['@svgr/webpack', 'url-loader'],
+    //   },
     ],
   },
   resolve: {

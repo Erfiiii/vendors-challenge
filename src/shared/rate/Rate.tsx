@@ -15,7 +15,6 @@ export function Rate(props: Props) {
     return (
         <div className={styles['wrapper']}>
             <span className={styles['rate']} style={{color: color}}>{formatNumber(rate)}</span>
-            {/* <StarIcon style={{color: color}}/> */}
         </div>
     )
 }
