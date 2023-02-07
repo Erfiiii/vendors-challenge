@@ -13,6 +13,7 @@ type Props = PropsWithChildren<OwnProps>;
 export function VendorsPage(props: Props) {
     const [page, setPage] = useState<number>(0)
     const dispatch = useAppDispatch();
+    const error = useAppSelector(state=>state.vendors.error)
     const loading = useAppSelector(state => state.vendors.isLoading)
     const vendors = useAppSelector(state => state.vendors.vendors, shallowEqual)
     useEffect(() => {
@@ -22,6 +23,10 @@ export function VendorsPage(props: Props) {
     const loadMore = useCallback(() => {
         setPage(prevPage => prevPage + 1)
     }, [setPage])
+
+    if(error) {
+        return <>Oops! Something went wrong. try again.</>
+    }
 
     return (
         <InfiniteScroll
